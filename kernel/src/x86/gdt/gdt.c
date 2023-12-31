@@ -61,7 +61,7 @@ static void gdt_add_entry(uint8_t access) {
     entry->base2 = 0;
 }
 
-extern void gdt_reload(uint64_t gdtr_addr, uint16_t kernel_code, uint16_t kernel_data);
+extern void gdt_reload(uint64_t gdtr_addr, uint16_t code_offset, uint16_t data_offset);
 
 void gdt_init() {
     gdt_add_null_entry();

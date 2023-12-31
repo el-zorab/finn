@@ -10,10 +10,9 @@ gdt_reload:
     lretq
 
 reload_seg_regs:
-    mov %dx, %ax
-    mov %ax, %ds
-    mov %ax, %es
-    mov %ax, %fs
-    mov %ax, %gs
-    mov %ax, %ss
+    mov %dx, %ds
+    mov %dx, %es
+    mov %dx, %fs
+    mov %dx, %gs
+    mov %dx, %ss
     ret
